@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everlasting Matches - Find Your Perfect Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Everlasting<span>Matches</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#search">Search</a>
+                <a href="#about">About</a>
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="btn-primary">Join Now</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#about">About</a>
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="btn-primary">Join Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Match Today</h1>
+                <p>Join thousands of happy couples who found love through our trusted matchmaking service.</p>
+                <a href="#" class="btn-primary">Get Started</a>
+            </div>
+            <div class="hero-form">
+                <h3>Create Your Free Profile</h3>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>I am looking for</option>
+                            <option value="male">A Man</option>
+                            <option value="female">A Woman</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Register Now</button>
+                    <p class="form-footer">By registering, you agree to our <a href="#">Terms & Conditions</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Everlasting Matches?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Verified Profiles</h3>
+                    <p>All profiles undergo strict verification to ensure authenticity and safety.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>Our advanced algorithm suggests highly compatible matches based on your preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Privacy Protection</h3>
+                    <p>Your personal information remains confidential until you choose to share it.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Access to relationship experts and community forums for guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K.">
+                        <p>"Everlasting Matches helped me find my soulmate. We connected instantly and got married within a year!"</p>
+                        <h4>Sarah & Raj</h4>
+                        <span>Married since 2021</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                        <p>"As a busy professional, I didn't have time to search. The matching system found me the perfect partner."</p>
+                        <h4>Michael & Priya</h4>
+                        <span>Married since 2022</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer L.">
+                        <p>"I was skeptical at first, but the quality of matches was exceptional. We're now expecting our first child!"</p>
+                        <h4>Jennifer & Arjun</h4>
+                        <span>Married since 2020</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <h2 class="section-title">Find Your Perfect Match</h2>
+            <div class="search-container">
+                <div class="search-sidebar">
+                    <!-- Age Range Filter -->
+                    <div class="filter-group">
+                        <h4><i class="fas fa-birthday-cake"></i> Age Range</h4>
+                        <div class="range-slider">
+                            <div class="range-labels">
+                                <span>From</span>
+                                <span>To</span>
+                            </div>
+                            <input type="range" min="18" max="70" value="25" class="slider" id="age-min">
+                            <input type="range" min="18" max="70" value="40" class="slider" id="age-max">
+                            <div class="range-values">
+                                <span id="min-age">25</span> - <span id="max-age">40</span> years
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Location Filter -->
+                    <div class="filter-group">
+                        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                        <input type="text" placeholder="Enter city or country">
+                    </div>
+                
+                    <!-- Education Filter -->
+                    <div class="filter-group">
+                        <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                        <select>
+                            <option value="">Any Education</option>
+                            <option value="high-school">High School</option>
+                            <option value="bachelors">Bachelor's Degree</option>
+                            <option value="masters">Master's Degree</option>
+                            <option value="doctorate">Doctorate</option>
+                        </select>
+                    </div>
+                
+                    <!-- Religion Filter -->
+                    <div class="filter-group">
+                        <h4><i class="fas fa-pray"></i> Religion</h4>
+                        <select>
+                            <option value="">Any Religion</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="christian">Christian</option>
+                            <option value="sikh">Sikh</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                
+                    <button class="btn-primary">Apply Filters</button>
+                </div>
+                <div class="search-results">
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ananya R.">
+                            <span class="online-status"></span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Ananya R.</h3>
+                            <p>28 years, Hindu, Bangalore</p>
+                            <p>Software Engineer, Master's Degree</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Rahul S.">
+                        </div>
+                        <div class="profile-info">
+                            <h3>Rahul S.</h3>
+                            <p>32 years, Hindu, Mumbai</p>
+                            <p>Doctor, MD</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Priya M.">
+                            <span class="online-status"></span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Priya M.</h3>
+                            <p>26 years, Hindu, Delhi</p>
+                            <p>Architect, Bachelor's Degree</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Vikram J.">
+                        </div>
+                        <div class="profile-info">
+                            <h3>Vikram J.</h3>
+                            <p>35 years, Hindu, Pune</p>
+                            <p>Business Owner, MBA</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Neha K.">
+                        </div>
+                        <div class="profile-info">
+                            <h3>Neha K.</h3>
+                            <p>29 years, Hindu, Hyderabad</p>
+                            <p>Teacher, Master's Degree</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="Arjun P.">
+                            <span class="online-status"></span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Arjun P.</h3>
+                            <p>31 years, Hindu, Chennai</p>
+                            <p>Engineer, MTech</p>
+                            <div class="profile-actions">
+                                <button class="btn-outline">View Profile</button>
+                                <button class="btn-primary">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <button class="btn-outline">Previous</button>
+                        <span>Page 1 of 5</span>
+                        <button class="btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Everlasting Matches</h2>
+                <p>Founded in 2015, Everlasting Matches has been connecting hearts with a modern approach to traditional matchmaking. Our platform combines cultural values with cutting-edge technology to help you find a life partner who truly complements you.</p>
+                <p>With over 50,000 successful matches and counting, we take pride in our personalized approach and commitment to your privacy and security.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>50,000+</h3>
+                        <p>Successful Matches</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1M+</h3>
+                        <p>Active Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>200+</h3>
+                        <p>Cities Covered</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Happy couple">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join thousands of happy couples who found their perfect match through our platform.</p>
+            <a href="#" class="btn-primary">Create Your Profile</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Everlasting Matches</h3>
+                    <p>Your trusted partner in finding meaningful relationships that last a lifetime.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Match Street, Love City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@everlastingmatches.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <a href="https://www.freetemplatehub.com" class="site-link" target="_blank">FreeTemplateHub.com</a>. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+            <div class="tab-content active" id="login">
+                <form id="login-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <p class="form-footer">Don't have an account? <a href="#" class="switch-tab" data-tab="signup">Sign up</a></p>
+                </form>
+            </div>
+            <div class="tab-content" id="signup">
+                <form id="signup-modal-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" placeholder="Date of Birth" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Religion</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="christian">Christian</option>
+                            <option value="sikh">Sikh</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="file-upload">
+                            <input type="file" accept="image/*">
+                            <span>Upload Profile Photo</span>
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">Create Account</button>
+                    <p class="form-footer">Already have an account? <a href="#" class="switch-tab" data-tab="login">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profile-modal">
+        <div class="modal-content profile-view">
+            <span class="close-modal">&times;</span>
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Ananya R.">
+                    <span class="online-status"></span>
+                </div>
+                <div class="profile-info">
+                    <h2>Ananya R.</h2>
+                    <p>28 years, Female</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                    <div class="profile-buttons">
+                        <button class="btn-primary"><i class="fas fa-heart"></i> Send Interest</button>
+                        <button class="btn-outline"><i class="fas fa-comment"></i> Message</button>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-details">
+                <div class="detail-section">
+                    <h3>About Me</h3>
+                    <p>I'm a software engineer with a passion for travel and photography. I value honesty, kindness, and a good sense of humor in a partner. My family is very important to me, and I'm looking for someone who shares similar values and life goals.</p>
+                </div>
+                <div class="detail-section">
+                    <h3>Basic Information</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span>Religion</span>
+                            <p>Hindu</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Caste</span>
+                            <p>Brahmin</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Marital Status</span>
+                            <p>Never Married</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Height</span>
+                            <p>5'4" (163 cm)</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Education</span>
+                            <p>Master's Degree</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Occupation</span>
+                            <p>Software Engineer</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Income</span>
+                            <p class="premium-info">Premium Member Only</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Contact</span>
+                            <p class="premium-info">Premium Member Only</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3>Family Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span>Father's Occupation</span>
+                            <p>Government Employee</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Mother's Occupation</span>
+                            <p>Homemaker</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Siblings</span>
+                            <p>1 Brother</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Family Location</span>
+                            <p>Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h3>Partner Preferences</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <span>Age</span>
+                            <p>28-35 years</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Height</span>
+                            <p>5'8" and above</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Religion</span>
+                            <p>Hindu</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Education</span>
+                            <p>Graduate or above</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Occupation</span>
+                            <p>Professional</p>
+                        </div>
+                        <div class="detail-item">
+                            <span>Location</span>
+                            <p>Bangalore or willing to relocate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium-cta">
+                    <h3>Unlock Full Profile & Contact Details</h3>
+                    <p>Upgrade to Premium to view complete profile and contact this member directly.</p>
+                    <button class="btn-primary">Upgrade Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
