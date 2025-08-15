@@ -293,7 +293,9 @@ window.addEventListener('click', (e) => {
     const sampleTools = [
         {name: 'k9s', desc: 'Terminal UI to interact with Kubernetes clusters.'},
         {name: 'Prometheus + Grafana', desc: 'Open-source monitoring and visualization stack for observability.'},
-        {name: 'Terragrunt', desc: 'Thin wrapper for Terraform that provides DRY patterns for multi-environment infra.'}
+        {name: 'Terragrunt', desc: 'Thin wrapper for Terraform that provides DRY patterns for multi-environment infra.'},
+        {name: 'AWS vs Azure (Guidance)', desc: 'AWS: broadest service surface and third-party ecosystem — great for startups needing many integrations. Azure: best fit for enterprises with heavy Microsoft workloads (Active Directory, .NET, Microsoft 365 integration). Choose based on existing tooling, data residency, and team expertise.'},
+        {name: 'When to pick multi-cloud', desc: 'Use multi-cloud for resilience and provider lock-in mitigation; prefer a single primary provider for operational simplicity and cost efficiency.'}
     ];
 
     function renderFeed(items) {
@@ -427,6 +429,21 @@ window.addEventListener('click', (e) => {
             const item = document.createElement('div');
             item.className = 'tool-item';
             item.innerHTML = `<h4>${escapeHtml(t.name)}</h4><p>${escapeHtml(t.desc)}</p>`;
+            // Add provider badges for guidance items
+            if (/aws|azure|multi-cloud|guidance/i.test(t.name + ' ' + t.desc)) {
+                const badges = document.createElement('div');
+                badges.style.marginTop = '8px';
+                if (/aws/i.test(t.name + ' ' + t.desc)) {
+                    const b = document.createElement('span'); b.className = 'provider-badge'; b.textContent = 'AWS'; badges.appendChild(b);
+                }
+                if (/azure/i.test(t.name + ' ' + t.desc)) {
+                    const b = document.createElement('span'); b.className = 'provider-badge'; b.textContent = 'Azure'; badges.appendChild(b);
+                }
+                if (/multi-cloud/i.test(t.name + ' ' + t.desc)) {
+                    const b = document.createElement('span'); b.className = 'provider-badge'; b.textContent = 'Multi'; badges.appendChild(b);
+                }
+                item.appendChild(badges);
+            }
             toolsList.appendChild(item);
         });
     }
