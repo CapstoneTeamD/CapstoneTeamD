@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everlasting Matches - Find Your Perfect Partner</title>
+    <title>IT Pulse - Live Tech News & Tips</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,13 +12,15 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Everlasting<span>Matches</span></a>
+            <a href="#" class="logo">IT<span>Pulse</span></a>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#search">Search</a>
+                <a href="#live">Live</a>
+                <a href="#tips">Tips</a>
+                <a href="#tools">Tools</a>
                 <a href="#about">About</a>
                 <a href="#" class="login-btn">Login</a>
-                <a href="#" class="btn-primary">Join Now</a>
+                <a href="#" class="btn-primary">Subscribe</a>
             </div>
             <button class="hamburger">
                 <span></span>
@@ -41,111 +43,64 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Find Your Perfect Match Today</h1>
-                <p>Join thousands of happy couples who found love through our trusted matchmaking service.</p>
-                <a href="#" class="btn-primary">Get Started</a>
+                <h1>IT Pulse — Live Tech News, Tips & Tools</h1>
+                <p>Hourly updates on global technology events, curated tips & tricks, and tools you can trust.</p>
+                <a href="#live" class="btn-primary">View Live Feed</a>
             </div>
             <div class="hero-form">
-                <h3>Create Your Free Profile</h3>
+                <h3>Subscribe for hourly updates</h3>
                 <form id="signup-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
                     </div>
                     <div class="form-group">
-                        <select required>
-                            <option value="" disabled selected>I am looking for</option>
-                            <option value="male">A Man</option>
-                            <option value="female">A Woman</option>
+                        <select name="frequency" required>
+                            <option value="hourly">Hourly Digest</option>
+                            <option value="daily">Daily Summary</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Register Now</button>
-                    <p class="form-footer">By registering, you agree to our <a href="#">Terms & Conditions</a></p>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                    <p class="form-footer">We respect your privacy. Unsubscribe anytime.</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Live Feed Section -->
+    <section class="live-feed" id="live">
         <div class="container">
-            <h2 class="section-title">Why Choose Everlasting Matches?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Verified Profiles</h3>
-                    <p>All profiles undergo strict verification to ensure authenticity and safety.</p>
+            <h2 class="section-title">Live World Feed</h2>
+            <div class="feed-controls">
+                <div class="left">
+                    <button id="refresh-feed" class="btn-outline">Refresh</button>
+                    <label class="auto-toggle"><input type="checkbox" id="auto-update" checked> Auto-update hourly</label>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Smart Matching</h3>
-                    <p>Our advanced algorithm suggests highly compatible matches based on your preferences.</p>
+                <div class="right">
+                    <span id="last-updated">Last updated: --</span>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Privacy Protection</h3>
-                    <p>Your personal information remains confidential until you choose to share it.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Support</h3>
-                    <p>Access to relationship experts and community forums for guidance.</p>
-                </div>
+            </div>
+            <div id="feed" class="feed-grid">
+                <!-- feed cards rendered by JS -->
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- Tips & Tricks Section -->
+    <section class="tips" id="tips">
         <div class="container">
-            <h2 class="section-title">Success Stories</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah K.">
-                        <p>"Everlasting Matches helped me find my soulmate. We connected instantly and got married within a year!"</p>
-                        <h4>Sarah & Raj</h4>
-                        <span>Married since 2021</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
-                        <p>"As a busy professional, I didn't have time to search. The matching system found me the perfect partner."</p>
-                        <h4>Michael & Priya</h4>
-                        <span>Married since 2022</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer L.">
-                        <p>"I was skeptical at first, but the quality of matches was exceptional. We're now expecting our first child!"</p>
-                        <h4>Jennifer & Arjun</h4>
-                        <span>Married since 2020</span>
-                    </div>
-                </div>
+            <h2 class="section-title">Tips & Tricks</h2>
+            <div id="tips-grid" class="tips-grid">
+                <!-- tips rendered by JS -->
             </div>
-            <div class="slider-controls">
-                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Tools & Resources -->
+    <section class="tools" id="tools">
+        <div class="container">
+            <h2 class="section-title">Tools & Resources</h2>
+            <div id="tools-list" class="tools-list">
+                <!-- tools rendered by JS -->
             </div>
         </div>
     </section>
@@ -345,8 +300,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Everlasting Matches</h3>
-                    <p>Your trusted partner in finding meaningful relationships that last a lifetime.</p>
+                    <h3>IT Pulse</h3>
+                    <p>Live technology news, actionable tips, and trusted tools — updated hourly.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -377,9 +332,9 @@
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Match Street, Love City</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> support@everlastingmatches.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 100 Tech Avenue, Silicon Harbor</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 987-6543</li>
+                        <li><i class="fas fa-envelope"></i> editor@itpulse.example</li>
                     </ul>
                 </div>
             </div>
@@ -582,6 +537,17 @@
         </div>
     </div>
 
+    <script>
+        // Try to dynamically load config.js (keep API keys out of git). If not present, continue.
+        (function(){
+            var s = document.createElement('script');
+            s.src = 'config.js';
+            s.async = true;
+            s.onload = function(){ console.log('config.js loaded'); };
+            s.onerror = function(){ /* config.js optional */ };
+            document.head.appendChild(s);
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

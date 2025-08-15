@@ -1,16 +1,20 @@
-## Hi there 👋
+## IT Pulse — local preview
 
-<!--
-**CapstoneTeamD/CapstoneTeamD** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This project is a static site converted into a small IT news dashboard demo. It supports an optional client-side NewsAPI integration.
 
-Here are some ideas to get you started:
+Quick start (serve locally):
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+Optional: wire a NewsAPI key (client-side / demo only)
+
+1. Copy `config.example.js` to `config.js`.
+2. Edit `config.js` and set `window.NEWSAPI_KEY = 'your-api-key-here';`
+3. Reload the page. The live feed will prefer NewsAPI results if the key is provided.
+
+Security: placing the API key in `config.js` is visible to anyone who inspects your site. For production, use a small server proxy to keep keys secret.
+
+If you'd like, I can add a Node/Express proxy to keep the key secure — ask me and I'll add it.

@@ -1304,3 +1304,81 @@ ul {
         grid-template-columns: 1fr;
     }
 }
+
+/* Live Feed Styles */
+.feed-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.feed-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.feed-card:hover {
+    transform: translateY(-6px);
+}
+
+.feed-title {
+    color: var(--dark-color);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.feed-meta {
+    font-size: 0.85rem;
+    color: var(--gray-dark);
+    margin-bottom: 12px;
+}
+
+.feed-body {
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+/* Tips & Tools */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tip-card {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.tools-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.tool-item {
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Small utility for auto-toggle label */
+.auto-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-dark);
+}
