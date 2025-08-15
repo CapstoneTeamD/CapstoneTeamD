@@ -276,25 +276,24 @@ window.addEventListener('click', (e) => {
     const tipsGrid = document.getElementById('tips-grid');
     const toolsList = document.getElementById('tools-list');
 
-    // Sample data (in a real app, you'd call external APIs)
+    // Cloud-focused sample data (fallback when no NewsAPI key provided)
     const sampleHeadlines = [
-        {source: 'Reuters', title: 'Major cloud provider reports outage affecting thousands', category: 'Cloud', timeOffsetMins: 5},
-        {source: 'The Verge', title: 'New smartphone chipset promises big AI gains', category: 'Hardware', timeOffsetMins: 12},
-        {source: 'ZDNet', title: 'Critical zero-day patched in popular web server', category: 'Security', timeOffsetMins: 20},
-        {source: 'TechCrunch', title: 'Startups raise $200M for developer tooling', category: 'Business', timeOffsetMins: 30},
-        {source: 'Wired', title: 'How to harden your home Wi‑Fi network', category: 'Advice', timeOffsetMins: 45}
+        {source: 'Stratoscloud', title: 'Multi-region control planes become default for resilience', category: 'Architecture', timeOffsetMins: 8},
+        {source: 'Stratoscloud', title: 'Serverless containers gain predictable cold-start guarantees', category: 'Serverless', timeOffsetMins: 22},
+        {source: 'Stratoscloud', title: 'New managed Confidential VMs announced across major providers', category: 'Security', timeOffsetMins: 35},
+        {source: 'Stratoscloud', title: 'Open-source tooling standardizes cloud cost observability', category: 'FinOps', timeOffsetMins: 50}
     ];
 
     const sampleTips = [
-        {title: 'Quickly check open ports on macOS', body: 'Use: lsof -iTCP -sTCP:LISTEN -n -P to list listening ports and owning processes.'},
-        {title: 'Secure your SSH', body: 'Disable root login, use key-based auth, and change the default port to reduce noise.'},
-        {title: 'Browser privacy', body: 'Use container or profile-based browsing for accounts and enable tracking protection.'}
+        {title: 'Optimize object storage lifecycle', body: 'Use lifecycle policies to tier older objects to colder, cheaper storage and reduce monthly costs.'},
+        {title: 'Right-size instances with confidence', body: 'Leverage workload sampling and CPU/memory profiles before resizing to avoid performance regressions.'},
+        {title: 'Design for failure', body: 'Architect services across AZs/regions and use health checks + automated failover.'}
     ];
 
     const sampleTools = [
-        {name: 'htop', desc: 'Interactive process viewer for Unix systems.'},
-        {name: 'jq', desc: 'Lightweight and flexible JSON processor.'},
-        {name: 'nmap', desc: 'Network discovery and security auditing tool.'}
+        {name: 'k9s', desc: 'Terminal UI to interact with Kubernetes clusters.'},
+        {name: 'Prometheus + Grafana', desc: 'Open-source monitoring and visualization stack for observability.'},
+        {name: 'Terragrunt', desc: 'Thin wrapper for Terraform that provides DRY patterns for multi-environment infra.'}
     ];
 
     function renderFeed(items) {
@@ -434,6 +433,60 @@ window.addEventListener('click', (e) => {
 
     renderTips();
     renderTools();
+
+    // --- Experts & Upcoming ---
+    const expertsListEl = document.getElementById('experts-list');
+    const upcomingListEl = document.getElementById('upcoming-list');
+
+    const sampleExperts = [
+        {name: 'Aisha Khan', title: 'Cloud Reliability Lead, NovaCloud', bio: 'Champion of multi-region control planes and self-healing systems.', twitter: '@aishakhan', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=60', profileUrl: 'https://twitter.com/aishakhan'},
+        {name: 'Luis Moreno', title: 'Principal Security Engineer, OpenDefend', bio: 'Builds cloud runtime protections and supply-chain defenses.', twitter: '@lmoreno_sec', avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?auto=format&fit=crop&w=400&q=60', profileUrl: 'https://twitter.com/lmoreno_sec'},
+        {name: 'Chen Wei', title: 'Director, Distributed Systems, Qube', bio: 'Engineer focused on consensus, orchestration, and edge patterns.', twitter: '@chenwei_sys', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=60', profileUrl: 'https://twitter.com/chenwei_sys'},
+        {name: 'Elena Petrova', title: 'AI & Cloud Ethics, ThoughtFrame', bio: 'Researches safe ML deployment, governance and responsible inference.', twitter: '@elenapetrova', avatar: 'https://images.unsplash.com/photo-1531123414780-f0b2b29d2d6b?auto=format&fit=crop&w=400&q=60', profileUrl: 'https://twitter.com/elenapetrova'}
+    ];
+
+    const sampleUpcoming = [
+        {title: 'Provider-native confidential compute expands', desc: 'More regions and managed services will support confidential VMs and enclaves this year.'},
+        {title: 'Cross-cloud networking primitives standardize', desc: 'Expect improved APIs and tooling for secure cross-cloud connectivity and service mesh federation.'},
+        {title: 'Edge cloud platforms for real-time inference', desc: 'New offerings will bring LLM inference closer to devices with low-latency guarantees.'},
+        {title: 'Billing models evolve for sustainable workloads', desc: 'New per-inference and burst-based pricing options will appear to support ML workloads.'}
+    ];
+
+    function renderExperts() {
+        if (!expertsListEl) return;
+        expertsListEl.innerHTML = '';
+        sampleExperts.forEach(ex => {
+            const card = document.createElement('div');
+            card.className = 'expert-card';
+            card.innerHTML = `
+                <div class="expert-top">
+                    <img src="${escapeHtml(ex.avatar || '')}" alt="${escapeHtml(ex.name)}" class="expert-avatar">
+                    <div class="expert-info">
+                        <h4>${escapeHtml(ex.name)}</h4>
+                        <p class="expert-title">${escapeHtml(ex.title)}</p>
+                    </div>
+                </div>
+                <p class="expert-bio">${escapeHtml(ex.bio)}</p>
+                <p class="expert-twitter"><a href="${escapeHtml(ex.profileUrl || '#')}" target="_blank" rel="noopener noreferrer">${escapeHtml(ex.twitter || '')}</a></p>
+            `;
+            expertsListEl.appendChild(card);
+        });
+    }
+
+    function renderUpcoming() {
+        if (!upcomingListEl) return;
+        // Keep the header, render list below
+        upcomingListEl.querySelectorAll('.upcoming-item').forEach(n => n.remove());
+        sampleUpcoming.forEach(item => {
+            const el = document.createElement('div');
+            el.className = 'upcoming-item';
+            el.innerHTML = `<strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.desc)}</p>`;
+            upcomingListEl.appendChild(el);
+        });
+    }
+
+    renderExperts();
+    renderUpcoming();
 
     // Signup form: simple UX
     const signupForm = document.getElementById('signup-form');

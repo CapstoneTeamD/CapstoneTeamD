@@ -1,6 +1,6 @@
-## IT Pulse — local preview
+## Stratoscloud — local preview
 
-This project is a static site converted into a small IT news dashboard demo. It supports an optional client-side NewsAPI integration.
+This project is a static site converted into a cloud-focused publication (Stratoscloud). It supports an optional client-side NewsAPI integration.
 
 Quick start (serve locally):
 
